@@ -50,7 +50,7 @@ Install my-project with npm
 Clone the UPM repository to your local machine:
 
 ```shell
-    git clone https://github.com/username/upm.git
+    git clone https://github.com/Dtechking/UPM.git
 ```
 
 Change to the UPM directory:
