@@ -8,18 +8,18 @@ UPM (Unified Package Manager) is a user-friendly package manager designed for De
 
 UPM GUI
 
-<p align = "center"><img src = "https://github.com/Dtechking/UPM/blob/master/4.png" width="65%"/></p>
+<p align = "center"><img src = "https://github.com/Dtechking/UPM/blob/master/output/4.png" width="65%"/></p>
 
 Backend
 
 <p align = "center">
-    <img src="https://github.com/Dtechking/UPM/blob/master/1.png" width="45%" height="500px"/>
-    <img src="https://github.com/Dtechking/UPM/blob/master/2.png" width="45%" height="500px"/>
+    <img src="https://github.com/Dtechking/UPM/blob/master/output/1.png" width="45%" height="500px"/>
+    <img src="https://github.com/Dtechking/UPM/blob/master/output/2.png" width="45%" height="500px"/>
 </p>
 
 Running GUI
 
-<p align = "center"><img src = "https://github.com/Dtechking/UPM/blob/master/6.png" width="75%"/></p>
+<p align = "center"><img src = "https://github.com/Dtechking/UPM/blob/master/output/6.png" width="75%"/></p>
 
 ## Tech / Frameworks Used
 
