@@ -8,7 +8,7 @@ UPM (Unified Package Manager) is a user-friendly package manager designed for De
 
 UPM GUI
 
-<p align = "center"><img src = "https://github.com/Dtechking/UPM/blob/master/4.png"/></p>
+<p align = "center"><img src = "https://github.com/Dtechking/UPM/blob/master/4.png" width="65%"/></p>
 
 Backend
 
