@@ -13,8 +13,8 @@ UPM GUI
 Backend
 
 <p align = "center">
-    <img src="https://github.com/Dtechking/UPM/blob/master/1.png" width="45%" height="550px"/>
-    <img src="https://github.com/Dtechking/UPM/blob/master/2.png" width="45%" height="550px"/>
+    <img src="https://github.com/Dtechking/UPM/blob/master/1.png" width="45%" />
+    <img src="https://github.com/Dtechking/UPM/blob/master/2.png" width="45%" />
 </p>
 
 Running GUI
