@@ -12,13 +12,13 @@ UPM GUI
 
 Backend
 
-<p align = "center"><img src="https://github.com/Dtechking/UPM/blob/master/1.png" /></p>
+<p align = "center"><img src="https://github.com/Dtechking/UPM/blob/master/1.png" width="65%"/></p>
 
-<p align = "center"><img src="https://github.com/Dtechking/UPM/blob/master/2.png" /></p>
+<p align = "center"><img src="https://github.com/Dtechking/UPM/blob/master/2.png" width="65%"/></p>
 
 Running GUI
 
-<p align = "center"><img src = "https://github.com/Dtechking/UPM/blob/master/6.png" width="50%"/></p>
+<p align = "center"><img src = "https://github.com/Dtechking/UPM/blob/master/6.png" width="65%"/></p>
 
 ## Tech / Frameworks Used
 
