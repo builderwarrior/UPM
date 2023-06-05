@@ -12,9 +12,9 @@ UPM GUI
 
 Backend
 
-<p align = "center"><img src="https://github.com/Dtechking/UPM/blob/master/1.png" width="65%"/></p>
+<p align = "center"><img src="https://github.com/Dtechking/UPM/blob/master/1.png" width="65%" height="200px"/></p>
 
-<p align = "center"><img src="https://github.com/Dtechking/UPM/blob/master/2.png" width="65%"/></p>
+<p align = "center"><img src="https://github.com/Dtechking/UPM/blob/master/2.png" width="65%" height="200px"/></p>
 
 Running GUI
 
