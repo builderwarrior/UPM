@@ -19,7 +19,7 @@ Backend
 
 Running GUI
 
-<p align = "center"><img src = "https://github.com/Dtechking/UPM/blob/master/6.png" width="65%"/></p>
+<p align = "center"><img src = "https://github.com/Dtechking/UPM/blob/master/6.png" width="75%"/></p>
 
 ## Tech / Frameworks Used
 
