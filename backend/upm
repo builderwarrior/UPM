@@ -1,0 +1,101 @@
+#!/bin/bash
+
+# Function to check if a command is available
+command_exists() {
+    command -v "$1" >/dev/null 2>&1
+}
+
+# Function to display an error message
+display_error() {
+    echo "Error: $1"
+    exit 1
+}
+
+# Function to display the help message
+display_help() {
+    echo "Usage: upm  [option]  [arguments]"
+    echo
+    echo "Options:"
+    echo "        -aboutme                         Display information about the current user"
+    echo "        -packagemem                      Display memory allocated for all packages"
+    echo "        -install  [package]              Install the specified package"
+    echo "        -remove  [package]               Remove the specified package"
+    echo "        -update  [package]               Update the specified package"
+    echo "        -listall                         List all installed packages"
+    echo "        -sysupgrade                      Update the system"
+	echo "        -sysversion                      Display the system version"  
+    echo "        -help                            Display this help message"
+    echo
+    echo 
+    echo 
+    echo
+    echo "For other help and support -- Contact :"
+    echo "Darshan B   (2021503505)  email: darshanthekingmaker@gmail.com"
+    echo "Prasanna M  (2021503535)  email: prsnn450@gmail.com"
+    echo "Sridhar P   (2021503709)  email: sridharpalanisamy171202@gmail.com"
+    echo "Ajaykumar K (2021503003)  email: ajaykumarbw21@gmail.com" 
+    exit 0
+}
+
+# Function to execute the respective package manager command
+execute_command() {
+    local command=$1
+    shift
+    case "$distribution" in
+        "debian")   sudo apt-get $command "$@" ;;
+        "Ubuntu")   sudo apt-get $command "$@" ;;
+        "fedora")   sudo dnf $command "$@" ;;
+        "Parrot")   sudo apt-get $command "$@" ;;
+        "Garuda")   sudo pacman $command "$@" ;;
+        "arch")     sudo pacman $command "$@" ;;
+        *)          display_error "Unsupported distribution: $distribution"
+    esac
+}
+
+display_version() {
+	case "$distribution" in
+        "debian")   lsb_release -r ;;
+        "Parrot")   lsb_release -r ;;
+        "Ubuntu")   lsb_release -r ;;
+        "fedora")   cat /etc/fedora-release ;;
+        "arch")     uname -r ;;
+        *)          display_error "Unsupported distribution: $distribution"
+    esac
+
+}
+
+# Function to list all installed packages
+list_installed_packages() {
+    case "$distribution" in
+        "debian")   apt list --installed | grep -v ^'^ii ' ;;
+        "Parrot")   dpkg-query -W -f='${Package}\t${Version}\n' | grep -v "^dpkg-query:" ;; # --installed | grep -v ^'^ii ' ;;
+        		#	dpkg-query -Wf '${Package}\t${Version}\t${Installed-Size}\n' ;;
+        "Ubuntu")   dpkg-query -Wf '${Package}\t${Version}\t${Installed-Size}\n' ;;
+        "fedora")   rpm -qa --queryformat '%{NAME}\t%{VERSION}\t%{SIZE}\n' ;;
+        "arch")     pacman -Qe --format '%n\t%v\t%w\t%z\n' ;;
+        *)          display_error "Unsupported distribution: $distribution"
+    esac
+}
+
+# Check the Linux distribution
+if command_exists lsb_release; then
+    distribution=$(lsb_release -is)
+elif [ -f /etc/os-release ]; then
+    distribution=$(awk -F= '/^ID=/{print $2}' /etc/os-release)
+else
+    display_error "Failed to determine the Linux distribution"
+fi
+
+# Parse the command line arguments
+case "$1" in
+    "-aboutme")         echo "Current User: $(whoami)" ;;
+    "-packagemem")      execute_command "repoquery --tree-requires --resolve --archlist=\$(uname -m)" ;;
+    "-install")         execute_command "install" "$2" ;;
+    "-remove")          execute_command "remove" "$2" ;;
+    "-update")          execute_command "upgrade" "$2" ;;
+    "-listall")         list_installed_packages ;;
+    "-sysupgrade")      execute_command "upgrade" ;;
+    "-sysversion")      display_version ;;
+    "-help")            display_help ;;
+    *)                  display_error "Invalid option: $1"
+esac
