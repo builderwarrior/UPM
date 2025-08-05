@@ -108,10 +108,11 @@ To launch the GUI, run the gui.py script:
 ## Contributors
 
 > Darshan B (2021503505)      - darshanthekingmaker@gmail.com
+
+> Ajaykumar K (2021503003)    - ajaykumarbw21@gmail.com
     
 > Prasanna M (2021503535)     - prsnn450@gmail.com
     
 > Sridhar P (2021503709)      - sridharpalanisamy171202@gmail.com
 
-> Ajaykumar K (2021503003)    - ajaykumarbw21@gmail.com
 
